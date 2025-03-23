@@ -17,7 +17,7 @@ import dagre from "@dagrejs/dagre";
 import "@xyflow/react/dist/style.css";
 
 import { initialNodes, initialEdges } from "./initialElements";
-import { TextUpdaterNode } from "./custom-node";
+import { IconNode } from "./custom-node";
 
 const dagreGraph = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}));
 
@@ -83,7 +83,7 @@ const Flow = () => {
     []
   );
 
-  const nodeTypes = useMemo(() => ({ textUpdater: TextUpdaterNode }), []);
+  const nodeTypes = useMemo(() => ({ iconNode: IconNode }), []);
 
   return (
     <div style={{ height: 800 }}>
